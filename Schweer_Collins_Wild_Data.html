@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data viz in the Wild</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Maria Schweer-Collins" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Data viz in the Wild
+### Maria Schweer-Collins
+
+---
+
+
+
+
+
+background-image: url(https://media.giphy.com/media/3oxRmGNqKwCzJ0AwPC/giphy.gif)
+
+
+
+
+
+---
+class: inverse, left, middle
+
+# Visualization One
+
+
+[National Park Attendance by Year and Park](https://samveverka.shinyapps.io/NationalParksAttendance/)
+
+
+- Desgined for anyone
+
+- Particularly for those interested in R visualization with shiny apps
+
+- Purpose is to describe changes in national park attendance over the past century
+
+---
+
+#Uses the following packages:
+
+
+```r
+# library(shiny)
+# library(reshape2)
+# library(ggvis)
+# library(dplyr)
+# library(DescTools)
+```
+
+
+---
+
+##Strengths 
+
+![strength](strengths.JPG)
+
+- Interactive: can change the dates, attendance rate, and park
+
+
+
+- Synthesizes a large amount of data
+
+
+
+- Simple 
+
+---
+
+
+
+##Improvements
+
+
+
+- Create a drop-down menu for national park names 
+
+
+
+- Use scale_y_log() to improve visibility of data from parks with lower attendance
+
+
+
+- Make it color blind friendly: make all park lines in gray, color or highlight selected park lines
+
+
+
+- An option to highlight one park in relation to all others; as it is, only the selected park line shows up
+
+- An option to select multiple parks for comparison (example: National Parks in the Northwest)
+
+[Link](https://samveverka.shinyapps.io/NationalParksAttendance/)
+
+
+---
+class: left, middle, inverse
+#Visualization Two: Parent-Child Relationships
+
+
+
+- Academic Audience
+
+- Communicates that parents are *most* likely to respond to negative child behavior with positive skills; whereas parents are *equally* likely to respond to appropriate child behavior with positive or negative skills. 
+
+--
+
+---
+
+
+class: center, middle
+![](hackman.JPG)&lt;!-- --&gt;
+
+&lt;font size="2"&gt;Source: Hakman, M., Chaffin, M., Funderburk, B., &amp; Silovsky, J. F. (2009). Change trajectories for parent-child interaction sequences during parent-child interaction therapy for child physical abuse. Child Abuse &amp; Neglect, 33(7), 461-470.&lt;/font&gt;
+
+
+---
+
+
+![](hackman.JPG)&lt;!-- --&gt;
+
+##Strength
+
+- The side by side comparison; visualization would be less effective with only one comparison
+
+
+
+---
+
+![](hackman.JPG)&lt;!-- --&gt;
+##Improvements
+
+- Take out neutral child behavior, maybe even neutral parent behavior
+
+- Add color to the bars for positive and negative parent responses
+
+- Relabel y-axis - percent is confusing - perhaps total number?
+
+- Reorder so that positive parent responses (i.e., highest bar) is first
+
+- Relabel the figure
+
+
+---
+
+class: center, middle, inverse
+
+# Thanks!
+
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+})();
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
